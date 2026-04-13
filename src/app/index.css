@@ -67,7 +67,8 @@ button {
 }
 
 .buttonFavorite,
-.buttonTrailer {
+.buttonTrailer,
+.buttonLink {
 	border-radius: 4px;
 	border: none;
 	padding: 0.4em 1em;
@@ -97,6 +98,15 @@ button {
 .buttonFavoriteWrapper {
 	right: -2px;
 	display: flex;
+}
+
+.buttonLink {
+	padding-inline: 0.8em;
+	border: 1px solid rgb(62, 62, 62);
+}
+
+.buttonLink:hover {
+	background-color: #818181;
 }
 
 section {

@@ -1,5 +1,5 @@
+import '@/app/index.css'
 import { memo, useState } from 'react'
-import './index.css'
 
 function FavoriteButton() {
 	const [isFavorite, setIsFavorite] = useState(false)

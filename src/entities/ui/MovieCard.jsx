@@ -1,17 +1,18 @@
+import FavoriteButton from '@/shared/ui/FavoriteButton'
+import { Modal } from '@/widgets/Modal'
 import { memo, useCallback, useState } from 'react'
-import FavoriteButton from './FavoriteButton'
-import { Modal } from './components/ui/Modal'
+import { Link } from 'react-router-dom'
 
 function MovieCard({ image, rating, trailerYoutubeId }) {
 	const [isOpenTrailer, setIsOpenTrailer] = useState(false)
 
 	const openTrailer = useCallback(() => {
-		setIsOpenTrailer(false)
+		setIsOpenTrailer(true)
 	}, [])
 
 	return (
 		<div
-			className='relative w-[200px] rounded-2xl overflow-hidden
+			className='relative w-[200px] h-[300px] rounded-2xl overflow-hidden
 		bg-neutral-900 shadow-lg hover:scale-105 transition-transform
 		will-change-transform duration-300
 		'
@@ -38,12 +39,10 @@ function MovieCard({ image, rating, trailerYoutubeId }) {
 			/>
 
 			<div className='absolute top-0 right-0 z-150 buttonFavoriteWrapper'>
-				<button
-					className='buttonTrailer'
-					onClick={() => {
-						setIsOpenTrailer(true)
-					}}
-				>
+				<Link to={`/movie/${trailerYoutubeId}`} className='buttonLink'>
+					🔗
+				</Link>
+				<button className='buttonTrailer' onClick={openTrailer}>
 					<img src='../public/trailer.png' alt='Trailer' width={25} />
 				</button>
 				<FavoriteButton />
