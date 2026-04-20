@@ -5,7 +5,7 @@ import { Layout } from './Layout'
 
 export function MainRoutes() {
 	return (
-		<Router>
+		<Router basename='/React-Netflix'>
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path='/' element={<App />} />

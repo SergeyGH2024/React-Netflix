@@ -9,7 +9,7 @@ export function ToggleTheme() {
 			onClick={toggleTheme}
 			className='px-3 py-2 rounded border border-black/10 text-white bg-black hover:bg-gray-700/100 dark:border-white/20
 					 dark:border-white/10 
-					 dark:hover:bg-white/10 transition w-20 h-10
+					 dark:hover:bg-white/10 transition w-20 h-10 whitespace-nowrap
 					 '
 		>
 			{theme === 'dark' ? '🌞 Light' : '🌚 Dark'}

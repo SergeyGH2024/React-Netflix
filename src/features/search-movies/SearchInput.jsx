@@ -2,8 +2,6 @@ import { ThemeContext } from '@/app/ThemeProvider'
 import { useContext } from 'react'
 
 export function SearchInput() {
-	// const { searchTerm, setSearchTerm } = useMovies()
-
 	const { searchTerm, setSearchTerm } = useContext(ThemeContext)
 
 	return (

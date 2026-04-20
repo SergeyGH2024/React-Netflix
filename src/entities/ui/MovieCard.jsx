@@ -43,7 +43,11 @@ function MovieCard({ image, rating, trailerYoutubeId }) {
 					🔗
 				</Link>
 				<button className='buttonTrailer' onClick={openTrailer}>
-					<img src='../public/trailer.png' alt='Trailer' width={25} />
+					<img
+						src={`${import.meta.env.BASE_URL}trailer.png`}
+						alt='Trailer'
+						width={25}
+					/>
 				</button>
 				<FavoriteButton />
 			</div>
